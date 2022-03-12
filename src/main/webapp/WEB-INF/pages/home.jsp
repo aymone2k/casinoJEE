@@ -10,5 +10,10 @@
 <h2>Bienvenue</h2>
 <h3>Régles du jeu</h3>
 <p> out <c:out value="home"/></p>
+
+
+<c:if test="${ 50 > 10 }" >
+    C'est vrai !
+</c:if>
 </body>
 </html>

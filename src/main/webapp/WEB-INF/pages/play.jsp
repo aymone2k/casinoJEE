@@ -7,8 +7,9 @@
 </head>
 <body>
 <%@include file="../header/header.jsp" %>
-<h2>PLAY</h2>
+<h2>JOUER</h2>
 <p> out <c:out value="play"/></p>
+
 <h3>Votre budget est de : ${budget}</h3>
 <h3>Ma mise</h3>
 

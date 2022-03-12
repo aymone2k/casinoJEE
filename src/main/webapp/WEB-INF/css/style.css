@@ -21,9 +21,16 @@ li a:hover{
 	color:red;
 	padding: 5px;
 }
+nav{
+	display : flex;
+	justify-content:flex-end;
+}
 
 /*Header*/
 header{
 	display:flex;
-	justify-content:flex-end;
+	justify-content:center;
+}
+h1{
+	
 }
