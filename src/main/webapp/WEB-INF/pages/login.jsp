@@ -16,7 +16,7 @@
             <input type="submit" value = "Log in"/>
         </form>
 
-
+<p> out <c:out value="login"/></p>
 
 </body>
 </html>

@@ -19,7 +19,7 @@
 <h4>${user.userAge}</h4>
 <h4>${user.connect}</h4>
 <h3>${ sessionScope.user.userName }</h3>
-
+<p> <c:out value="Bonojour"/></p>
 </header>
 </body>
 </html>
