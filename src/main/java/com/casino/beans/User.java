@@ -3,51 +3,56 @@ package com.casino.beans;
 import jakarta.servlet.http.HttpServletRequest;
 
 public class User {
-private String name;
-private int age;
-private int budget =1000 ;
-private boolean login;
+private boolean connect;
+private String userName;
+private int userAge;
 
-public String getName() {
-	return name;
-}
-public void setName(String name) {
-	this.name = name;
-}
-public long getAge() {
-	return age;
-}
-public void setAge(int age) {
-	this.age = age;
-}
-public int getBudget() {
-	return budget;
-}
-public void setBudget(int budget) {
-	this.budget = budget;
-}
-public boolean isLogin() {
-	return login;
-}
-public void setLogin(boolean login) {
-	this.login = login;
-}
-
-
-public void isMajeur(HttpServletRequest request) {
+public void verifUser(HttpServletRequest request) {
 	
-	name = request.getParameter("name");
-	age = Integer.parseInt(request.getParameter("age"));
+	String name = request.getParameter("name");
+	String ageUser = request.getParameter("age");
+	int age = Integer.parseInt(ageUser);
 	int limitAge = 18;
-	
 	int resultAge = Long.compare(age, limitAge);
+	
 	if(resultAge >= 0) {
-		login = true;
-		
+		connect = true;
+		userName=name;
+		userAge=age;
 	}
 	else {
-		login=false;
+		connect=false;
+		userName=name;
+		userAge=age;
 	}
+	
 }
+
+public boolean isConnect() {
+	return connect;
+}
+
+public void setConnect(boolean connect) {
+	this.connect = connect;
+}
+
+public String getUserName() {
+	return userName;
+}
+
+public void setUserName(String userName) {
+	this.userName = userName;
+}
+
+public int getUserAge() {
+	return userAge;
+}
+
+public void setUserAge(int userAge) {
+	this.userAge = userAge;
+}
+
+
+
 
 }

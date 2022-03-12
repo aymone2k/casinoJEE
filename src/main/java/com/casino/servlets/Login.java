@@ -38,16 +38,14 @@ public class Login extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		User user= new User();
-		user.isMajeur(request);
+		user.verifUser(request);
 		request.setAttribute("user", user);
 		
-		HttpSession userSession = request.getSession();
-		userSession.setAttribute("name", user.getName());
-		userSession.setAttribute("age", user.getAge());
-		userSession.setAttribute("login", user.isLogin());
-		userSession.setAttribute("budget", user.getBudget());
+		HttpSession session = request.getSession();
+		session.setAttribute("user", user);
+			
 		
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(request, response);

@@ -40,7 +40,7 @@ Play play = new Play();
 		play.play(request);
 		
 		
-		request.setAttribute("last budget", play.getLastBudget());
+		request.setAttribute("lastBudget", play.getLastBudget());
 		this.getServletContext().getRequestDispatcher("/WEB-INF/pages/play.jsp").forward(request, response);
 	}
 

@@ -14,16 +14,16 @@
 
  <form method="post" action="play">
             <label for="mise">mise : </label>
-            <input type="number" name="mise" id="mise" />
+            <input type="text" name="mise" id="mise" />
             
              <label for="nbPlay">Choisissez un nombre : </label>
-            <input type="number" name="nbPlay" id="nbPlay" />
+            <input type="text" name="nbPlay" id="nbPlay" />
             
             
-             <input type="submit" />
+             <input type="submit" value ="play" />
         </form>
         
-        
-       <p>mise restante: ${last budget }</p>
+        <h3>Mon budget: ${budget}</h3>
+       <p>mise restante: ${lastBudget }</p>
 </body>
 </html>

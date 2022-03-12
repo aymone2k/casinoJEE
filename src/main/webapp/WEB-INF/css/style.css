@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*menu*/
+ul {
+list-style:none;
+margin-left:0;
+padding-left:0;
+display:flex;
+
+}
+li {
+margin:15px;
+
+}
+ul li a{
+	text-decoration: none;
+	font-weight: bold;
+	color: green;
+}
+li a:hover{
+	background-color:grey;
+	color:red;
+	padding: 5px;
+}
+
+/*Header*/
+header{
+	display:flex;
+	justify-content:flex-end;
+}

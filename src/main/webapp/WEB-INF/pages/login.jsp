@@ -8,12 +8,12 @@
 <body>
 <%@include file="../header/header.jsp" %>
   
-        <form method="post" action="play">
+        <form method="post" action="login">
             <label for="name">Nom : </label>
             <input type="text" name="name" id="name" />
-            <label for="nom">Age : </label>
-            <input type="number" name="age" id="age" />
-            <input type="submit" />
+            <label for="age">Age : </label>
+            <input type="text" name="age" id="age" />
+            <input type="submit" value = "Log in"/>
         </form>
 
 

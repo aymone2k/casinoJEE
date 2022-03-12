@@ -9,5 +9,6 @@
 <%@include file="../header/header.jsp" %>
 <h2>Bienvenue</h2>
 <h3>Régles du jeu</h3>
+<p> out <c:out value="Bonojour"/></p>
 </body>
 </html>

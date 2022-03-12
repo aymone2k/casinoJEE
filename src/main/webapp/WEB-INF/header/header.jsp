@@ -6,20 +6,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p>header</p>
+<header>
 
-<h3>Mon budget: ${budget}</h3>
+
 <ul>
 <li><a href="login">LOG IN</a></li>
 </ul>
 
 <%@include file = "menu.jsp" %>
 
+<h4>${user.userName}</h4>
+<h4>${user.userAge}</h4>
+<h4>${user.connect}</h4>
+<h3>${ sessionScope.user.userName }</h3>
 
-<p>${user.login}</p>
-<p>${user.name}</p>
-<p>${user.age}</p>
-<h4>${sessionScope.name }</h4>   
-<h3>${name}, ${age }, ${login}</h3>
+</header>
 </body>
 </html>
