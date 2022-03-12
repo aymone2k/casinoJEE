@@ -36,11 +36,10 @@ public class CasinoGame extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-Play play = new Play();
-		play.play(request);
+		Play play = new Play();
+		play.startPlay(request);
+		request.setAttribute("play", play);
 		
-		
-		request.setAttribute("lastBudget", play.getLastBudget());
 		this.getServletContext().getRequestDispatcher("/WEB-INF/pages/play.jsp").forward(request, response);
 	}
 
