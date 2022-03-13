@@ -3,24 +3,29 @@ package com.casino.beans;
 import java.util.Random;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 public class Play {
 	private int miseUser;
-
-	
+private int nbTry;
+private int nbMystere;	
 	private int nbPlay;
 
 	private int lastBudget;
 	private boolean playAgain;
+	
+
  
 public void startPlay(HttpServletRequest request) {
 	String mise = request.getParameter("mise");
 	miseUser = Integer.parseInt(mise);
-	//budget = 1000;
+
+	 
 	//budget = budget - miseUser;
 	
-	
 
+	
+lastBudget = lastBudget -miseUser;
 	String numPlay =request.getParameter("nbPlay");
 	
 	nbPlay = Integer.parseInt(numPlay);
@@ -81,6 +86,26 @@ public boolean isPlayAgain() {
 
 public void setPlayAgain(boolean playAgain) {
 	this.playAgain = playAgain;
+}
+
+
+public int getNbTry() {
+	return nbTry;
+}
+
+
+public void setNbTry(int nbTry) {
+	this.nbTry = nbTry;
+}
+
+
+public int getNbMystere() {
+	return nbMystere;
+}
+
+
+public void setNbMystere(int nbMystere) {
+	this.nbMystere = nbMystere;
 }
 
 

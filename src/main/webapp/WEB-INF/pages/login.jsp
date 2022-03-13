@@ -18,7 +18,7 @@
  
   <c:when test="${  sessionScope.user.connect == false}">
   <h3> ACCES REFUSE AUX MOINS DE 18 ANS!!!</h3>
-  <h4> <c:out value="${ sessionScope.user.userName }" />, tu as <c:out value="${ sessionScope.user.userAge }" /> tu es trop jeune pour jouer!!</h4>
+  <h4> <c:out value="${ sessionScope.user.userName }" />, tu as <c:out value="${ sessionScope.user.userAge }" /> ans,  tu es trop jeune pour jouer!!</h4>
    <div>
         <form method="post" action="login">
             <label for="name">Nom : </label>

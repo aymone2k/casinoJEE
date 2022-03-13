@@ -8,6 +8,7 @@
 <body>
 <%@include file="../header/header.jsp" %>
 
+
 <h2>JOUER</h2>
 
 <p> out <c:out value="play"/></p>
@@ -22,11 +23,11 @@
              <label for="nbPlay">Choisissez un nombre : </label>
             <input type="text" name="nbPlay" id="nbPlay" />
             
-            
+         
              <input type="submit" value ="play" />
         </form>
         
-        <h3>Mon budget: ${play.budget}</h3>
+       
         <p>mise : ${play.miseUser }</p>
        <p>budget restant: ${play.lastBudget }</p>
        <p>tentative restant: ${play.nbTry }</p>

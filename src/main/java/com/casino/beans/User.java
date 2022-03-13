@@ -27,6 +27,7 @@ public void verifUser(HttpServletRequest request) {
 		nbTry=5;
 		topBudget=1000;
 		nbMystere= (new Random()).nextInt(10);
+		System.out.println(nbMystere);
 	}
 	else {
 		connect=false;
