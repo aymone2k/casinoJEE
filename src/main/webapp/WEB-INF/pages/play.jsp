@@ -3,16 +3,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Play</title>
 </head>
 <body>
 <%@include file="../header/header.jsp" %>
+
 <h2>JOUER</h2>
+
 <p> out <c:out value="play"/></p>
 
-<h3>Votre budget est de : <c:out value = "${play.lastBudget}">1000</c:out> euros</h3>
-<h3>Ma mise</h3>
-
+<h3><c:out value="${ sessionScope.user.userName }" />Votre budget est de : <c:out value="${ sessionScope.user.topBudget }" /> euros</h3>
+<h3>Vous disposez de <c:out value="${ sessionScope.user.nbTry }" /> tentatives</h3>
+<h4>Veuillez miser et choisir un nombre entre 0 et 10, si vous trouvez le bon nombre, vous doublez votre mise , sinon vous perdez votre mise </h4>
  <form method="post" action="play">
             <label for="mise">mise : </label>
             <input type="text" name="mise" id="mise" />
@@ -29,5 +31,6 @@
        <p>budget restant: ${play.lastBudget }</p>
        <p>tentative restant: ${play.nbTry }</p>
         <p>mystere : ${play.nbMystere}</p>
+       
 </body>
 </html>
