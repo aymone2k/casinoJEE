@@ -8,47 +8,67 @@ import jakarta.servlet.http.HttpSession;
 public class Play {
 	private int miseUser;
 private int nbTry;
-private int nbMystere;	
+private static int nbMystere= (new Random()).nextInt(22);	
 	private int nbPlay;
-
+	private int topBudget;
 	private int lastBudget;
 	private boolean playAgain;
 	
 
- 
+	
+/*public final int nbMyst(){
+	nbMystere= (new Random()).nextInt(10);
+	final int stock =nbMystere;
+	return stock;
+}*/
+
+
 public void startPlay(HttpServletRequest request) {
+	
 	String mise = request.getParameter("mise");
 	miseUser = Integer.parseInt(mise);
-
-	 
-	//budget = budget - miseUser;
+	topBudget = 1000;
+	nbTry =5;
+	
+	//final int stock = nbMyst(); 
+	System.out.println("--------1----------");
+	//System.out.println(nbMyst());
+	System.out.println(nbMystere);
+	//System.out.println(stock);
+	
 	
 
 	
-lastBudget = lastBudget -miseUser;
+
+
 	String numPlay =request.getParameter("nbPlay");
 	
 	nbPlay = Integer.parseInt(numPlay);
 	
+	if(nbPlay == nbMystere) {
+		
+		lastBudget = topBudget + (miseUser*2);
+		playAgain = false;
+		nbMystere= (new Random()).nextInt(22);	
+	}else {
+		
+		lastBudget = topBudget - miseUser;
+		playAgain= true;
+		
+		//retourne plus de tentavives poss
+	}
+	System.out.println("---------2---------");
+	System.out.println(nbMystere);
+	System.out.println(nbPlay);
+	/*do {
+		nbTry = nbTry -1;
+		//lastBudget = topBudget -miseUser;
 	
-	
-	//do {
-		  
 		// crédite mes gains ou mes pertes
-	/*	if(nbPlay == nbMystere) {
-			
-			lastBudget = budget + (miseUser*2);
-			playAgain = false;
-		}else {
-			
-			lastBudget = budget - miseUser;
-			playAgain= true;
-			
-			//retourne plus de tentavives poss
-		}*/
+		
 	//	nbTry =nbTry -1;
 		
-	//} while ((nbTry > 0 )&& (budget>= miseUser));
+	} while ((nbTry > 0 )&& (lastBudget>= miseUser));*/
 		
 }
 	
@@ -100,12 +120,23 @@ public void setNbTry(int nbTry) {
 
 
 public int getNbMystere() {
+	
 	return nbMystere;
 }
 
 
 public void setNbMystere(int nbMystere) {
 	this.nbMystere = nbMystere;
+}
+
+
+public int getTopBudget() {
+	return topBudget;
+}
+
+
+public void setTopBudget(int topBudget) {
+	this.topBudget = topBudget;
 }
 
 

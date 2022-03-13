@@ -31,7 +31,7 @@ public class CasinoGame extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
+		/*HttpSession session = request.getSession();
 		User user =  (User) session.getAttribute("user");
 		int topBudget = user.getTopBudget();
 	int nbTry = user.getNbTry();
@@ -41,7 +41,7 @@ public class CasinoGame extends HttpServlet {
 	play.setNbMystere(nbMystere);
 	play.setNbTry(nbTry);
 	
-	request.setAttribute("play", play);
+	request.setAttribute("play", play);*/
 		this.getServletContext().getRequestDispatcher("/WEB-INF/pages/play.jsp").forward(request, response);
 	}
 
